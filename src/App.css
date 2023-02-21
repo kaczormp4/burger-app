@@ -1,3 +1,12 @@
+body {
+  background-image: url("./pic.png/tło.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-attachment: fixed;
+  overflow: scroll;
+}
+
 .App {
   text-align: center;
   display: flex;
@@ -6,43 +15,86 @@
 }
 
 .container {
+  margin-top: 150px;
   width: 300px;
 }
 
 .burger-top {
   height: 100px;
   width: 100%;
-  /* background-color: rgb(246, 238, 14);
-  border-radius: 100px 100px 0 0; */
-  margin-bottom: 10px;
+  margin-bottom: 50px;
+  z-index: 101;
+  position: relative;
 }
 
 .burger-bottom {
   height: 100px;
   width: 100%;
-  /* background-color: rgb(246, 238, 14);
-  border-radius: 0 0 100px 100px; */
-  margin-top: 10px;
+  margin-top: -25px;
+  margin-left: 10px;
+  position: relative;
+  z-index: 100;
 }
 
 .meat {
-  /* height: 100px; */
+  position: relative;
   width: 100%;
-  /* background-color: #9b4805;
-  border-radius: 100px; */
-  margin: 10px 0;
+  z-index: 110;
 }
 
-.chees {
-  margin-bottom: 10px;
+.meat:hover {
+  cursor: pointer;
 }
 
-.buttons {
+.tomato {
+  position: relative;
+  width: 100%;
+  z-index: 110;
+}
+.tomato:hover {
+  cursor: pointer;
+}
+
+.cheese {
+  position: relative;
+  width: 100%;
+  z-index: 110;
+}
+
+.cheese:hover {
+  cursor: pointer;
+}
+.buttons-group {
+  position: fixed;
+  top: 0;
+  z-index: 150;
+  margin-top: 40px;
   text-align: center;
   display: flex;
   align-items: center;
-  flex-direction: row;
+  flex-direction: column;
+  left: 150px;
 }
 button {
-  margin: 40px;
+  margin: 20px;
+  border-radius: 10rem;
+  height: 40px;
+  width: 150px;
+  background-color: rgb(233, 185, 125);
+  color: black;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+button:hover {
+  cursor: pointer;
+  background-color: black;
+  color: rgb(233, 185, 125);
+}
+
+.talerz {
+  margin-left: -55px;
+  margin-top: -130px;
+  z-index: 10;
+  position: relative;
 }

@@ -1,38 +1,45 @@
-import { useState } from "react";
-import "./App.css";
+import React, { useState } from "react";
+
+import Button from "./components/Button/Button";
+import Ingredient from "./components/Ingredient/Ingredient";
 import bulkaTop from "./pic.png/bulka-top.png";
 import bulkaBottom from "./pic.png/bulka-bottom.png";
-import mieso from "./pic.png/mieso.png";
-import ser from "./pic.png/ser.png";
-import pomidor from "./pic.png/pomidor.png";
-import React from "react";
+import talerz from "./pic.png/talerz.png";
+
+import "./App.css";
 
 function App() {
   const [ingr, setIngr] = useState([""]);
 
   const INGR = {
     MEAT: "meat",
-    CHESS: "chess",
+    CHEESE: "cheese",
     TOMATO: "tomato",
   };
 
   const removeElement = (index) => {
     const element = ingr.filter((_, i) => i !== index);
-    console.log(element);
     setIngr(element);
   };
 
-  console.log(ingr);
+  const addElement = (index, type) => {
+    const newArr1 = [...ingr];
+    newArr1.splice(index, 0, type);
+    setIngr(newArr1);
+  };
+
   return (
     <div className="App">
-      <div className="buttons">
-        <button onClick={() => setIngr([...ingr, INGR.MEAT])}>Add meat</button>
-        <button onClick={() => setIngr([...ingr, INGR.CHESS])}>
-          Add chess
-        </button>
-        <button onClick={() => setIngr([...ingr, INGR.TOMATO])}>
+      <div className="buttons-group">
+        <Button ingr={ingr} setIngr={setIngr} ingrType={INGR.MEAT}>
+          Add meat
+        </Button>
+        <Button ingr={ingr} setIngr={setIngr} ingrType={INGR.CHEESE}>
+          Add cheese
+        </Button>
+        <Button ingr={ingr} setIngr={setIngr} ingrType={INGR.TOMATO}>
           Add tomato
-        </button>
+        </Button>
       </div>
 
       <div className="container">
@@ -42,43 +49,38 @@ function App() {
         {ingr.map((el, index) => {
           if (el === INGR.MEAT) {
             return (
-              <div className="meat">
-                <img
-                  src={mieso}
-                  onClick={() => removeElement(index)}
-                  alt="mieso"
-                ></img>
-              </div>
+              <Ingredient
+                type={INGR.MEAT}
+                removeElement={removeElement}
+                index={index}
+                addElement={addElement}
+              />
             );
-          } else if (el === INGR.CHESS) {
+          } else if (el === INGR.CHEESE) {
             return (
-              <div className="chees">
-                <img
-                  src={ser}
-                  onClick={() => removeElement(index)}
-                  alt="ser"
-                ></img>
-              </div>
+              <Ingredient
+                type={INGR.CHEESE}
+                removeElement={removeElement}
+                index={index}
+                addElement={addElement}
+              />
             );
           } else if (el === INGR.TOMATO) {
             return (
-              <div className="tomato">
-                <img
-                  src={pomidor}
-                  onClick={() => {
-                    const array = [...ingr];
-                    array.splice(index, 1);
-                    setIngr(array);
-                  }}
-                  alt="pomidor"
-                ></img>
-              </div>
+              <Ingredient
+                type={INGR.TOMATO}
+                removeElement={removeElement}
+                index={index}
+                addElement={addElement}
+              />
             );
           }
         })}
-
         <div className="burger-bottom">
           <img src={bulkaBottom} alt="bulka"></img>
+        </div>
+        <div className="talerz">
+          <img src={talerz} alt="talerz"></img>
         </div>
       </div>
     </div>

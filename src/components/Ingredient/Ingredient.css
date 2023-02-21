@@ -1,0 +1,20 @@
+.plusButton {
+  width: 100px;
+  height: 40px;
+  margin: 10px;
+  position: fixed;
+  left: 500px;
+}
+
+.smallIngr {
+  display: flex;
+  flex-direction: column;
+  left: 400px;
+  position: fixed;
+}
+
+.small {
+  width: 70px;
+  height: 60px;
+  margin: 3px;
+}
