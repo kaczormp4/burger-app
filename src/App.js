@@ -2,9 +2,9 @@ import React, { useState } from "react";
 
 import Button from "./components/Button/Button";
 import Ingredient from "./components/Ingredient/Ingredient";
-import bulkaTop from "./pic.png/bulka-top.png";
-import bulkaBottom from "./pic.png/bulka-bottom.png";
-import talerz from "./pic.png/talerz.png";
+import bulkaTop from "./assets/images/bulka-top.png";
+import bulkaBottom from "./assets/images/bulka-bottom.png";
+import talerz from "./assets/images/talerz.png";
 
 import "./App.css";
 
@@ -79,7 +79,7 @@ function App() {
         <div className="burger-bottom">
           <img src={bulkaBottom} alt="bulka"></img>
         </div>
-        <div className="talerz">
+        <div className="plate">
           <img src={talerz} alt="talerz"></img>
         </div>
       </div>

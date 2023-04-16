@@ -1,9 +1,9 @@
 import React from "react";
 
-import mieso1 from "./../../pic.png/mieso1.png";
-import ser1 from "./../../pic.png/ser1.png";
-import pomidor1 from "./../../pic.png/pomidor1.png";
-import kosz from "./../../pic.png/kosz.png";
+import mieso1 from "./../../assets/images/mieso1.png";
+import ser1 from "./../../assets/images/ser1.png";
+import pomidor1 from "./../../assets/images/pomidor1.png";
+import kosz from "./../../assets/images/kosz.png";
 
 const Menu = ({ handleExpand, expanded, addElement, index, removeElement }) => {
   return (

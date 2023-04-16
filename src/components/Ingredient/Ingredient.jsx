@@ -1,13 +1,9 @@
 import React, { useState } from "react";
 import Menu from "../Menu/Menu";
 
-import mieso from "./../../pic.png/mieso.png";
-import mieso1 from "./../../pic.png/mieso1.png";
-import ser from "./../../pic.png/ser.png";
-import ser1 from "./../../pic.png/ser1.png";
-import pomidor from "./../../pic.png/pomidor.png";
-import pomidor1 from "./../../pic.png/pomidor1.png";
-import kosz from "./../../pic.png/kosz.png";
+import mieso from "./../../assets/images/mieso.png";
+import ser from "./../../assets/images/ser.png";
+import pomidor from "./../../assets/images/pomidor.png";
 
 import "./Ingredient.css";
 
