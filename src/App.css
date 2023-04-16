@@ -1,5 +1,5 @@
 body {
-  background-image: url("./assets/images/tło.png");
+  background-image: url("./pic.png/tło.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
@@ -92,7 +92,7 @@ button:hover {
   color: rgb(233, 185, 125);
 }
 
-.plate {
+.talerz {
   margin-left: -55px;
   margin-top: -130px;
   z-index: 10;
